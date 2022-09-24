@@ -1,0 +1,48 @@
+@import '../../styles/partials/variables';
+
+header {
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-family: $montserrat;
+}
+
+#logo span {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: $blue;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2.563rem;
+  margin-left: 2.938rem;
+}
+
+nav ul > li {
+  font-size: 0.813rem;
+}
+
+nav ul > li > a {
+  color: $black;
+  text-transform: uppercase;
+}
+
+nav ul > li > a:hover {
+  color: $blackHover;
+}
+
+#profile-image {
+  border: 0.1rem solid $borderGray;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+#profile-image img {
+  width: 2.663rem;
+  height: 2.663rem;
+  padding: 0.625rem;
+}
