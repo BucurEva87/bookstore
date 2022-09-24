@@ -1,0 +1,34 @@
+@import './partials/variables';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100rem;
+  max-width: 100rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $paleGray;
+  margin: auto;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 87.5rem;
+}
+
+a {
+  text-decoration: none;
+}

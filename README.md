@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/238be4c1-a65a-4b2e-a49e-dfd807573d48/deploy-status)](https://app.netlify.com/sites/math-magicians-eva/deploys) -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f5d00084-e98e-45ca-ad97-274f0a54b49d/deploy-status)](https://app.netlify.com/sites/bookstore-eva/deploys?branch=routing)
 
-# Math Magicians
+# Bookstore
 
 > A content management system application for managing a bookstore.
 
@@ -31,13 +31,13 @@ In order to obtain a local copy of this repository run:
 
 - You can run test suites on this project by running `npm test`
 
-<!-- ## Live Demo -->
+## Live Demo
 
-<!-- [Live Demo Link](https://math-magicians-eva.netlify.app/) -->
+[Live Demo Link](https://deploy-preview-2--bookstore-eva.netlify.app/)
 
-<!-- ## Live Preview -->
+## Live Preview
 
-<!-- ![Live Preview](https://i.postimg.cc/qq3GhPxS/Math-Magicians-preview.png) -->
+![Live Preview](https://i.postimg.cc/2j1DhbPK/Screenshot-from-2022-09-24-15-27-53.png)
 
 ## Authors
 
