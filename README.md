@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 <!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/238be4c1-a65a-4b2e-a49e-dfd807573d48/deploy-status)](https://app.netlify.com/sites/math-magicians-eva/deploys) -->
 
-# Math Magicians
+# Bookstore
 
 > A content management system application for managing a bookstore.
 
