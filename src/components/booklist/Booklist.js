@@ -1,10 +1,8 @@
-import React from 'react'
-import style from './Booklist.module.scss'
+import React from 'react';
+// import style from './Booklist.module.scss'
 
-const Booklist = () => {
-  return (
-    <div>Booklist</div>
-  )
-}
+const Booklist = () => (
+  <div>Booklist</div>
+);
 
-export default Booklist
+export default Booklist;

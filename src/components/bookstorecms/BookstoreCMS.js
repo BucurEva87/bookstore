@@ -1,10 +1,8 @@
-import React from 'react'
-import style from './BookstoreCMS.module.scss'
+import React from 'react';
+// import style from './BookstoreCMS.module.scss'
 
-const BookstoreCMS = () => {
-  return (
-    <div>BookstoreCMS</div>
-  )
-}
+const BookstoreCMS = () => (
+  <div>BookstoreCMS</div>
+);
 
-export default BookstoreCMS
+export default BookstoreCMS;

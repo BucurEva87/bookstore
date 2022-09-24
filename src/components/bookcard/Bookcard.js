@@ -1,10 +1,8 @@
-import React from 'react'
-import style from './Bookcard.module.scss'
+import React from 'react';
+// import style from './Bookcard.module.scss'
 
-const Bookcard = () => {
-  return (
-    <div>Bookcard</div>
-  )
-}
+const Bookcard = () => (
+  <div>Bookcard</div>
+);
 
-export default Bookcard
+export default Bookcard;

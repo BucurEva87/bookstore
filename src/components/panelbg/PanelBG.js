@@ -1,10 +1,8 @@
-import React from 'react'
-import style from './PanelBG.module.scss'
+import React from 'react';
+// import style from './PanelBG.module.scss'
 
-const PanelBG = () => {
-  return (
-    <div>PanelBG</div>
-  )
-}
+const PanelBG = () => (
+  <div>PanelBG</div>
+);
 
-export default PanelBG
+export default PanelBG;
