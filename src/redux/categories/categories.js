@@ -1,14 +1,37 @@
-const CHECK_STATUS = 'CHECK_STATUS';
+import { createSlice } from '@reduxjs/toolkit';
 
-export const checkStatus = () => ({
-  type: CHECK_STATUS,
+const categoriesSlice = createSlice({
+  name: 'categories',
+  initialState: [
+    'fantasy',
+    'adventure',
+    'romance',
+    'contemporary',
+    'dystopian',
+    'mystery',
+    'horror',
+    'thriller',
+    'paranormal',
+    'historical fiction',
+    'science fiction',
+    'children\'s',
+    'memoire',
+    'cookbook',
+    'art',
+    'self-help',
+    'development',
+    'motivational',
+    'health',
+    'history',
+    'travel',
+    'guide/how-to',
+    'families and relationships',
+    'humor',
+  ],
+  reducers: {
+    checkStatus: () => 'Under construction',
+  },
 });
 
-export default (status, action) => {
-  switch (action.type) {
-    case CHECK_STATUS:
-      return 'Under construction';
-    default:
-      return status;
-  }
-};
+export default categoriesSlice.reducer;
+export const { checkStatus } = categoriesSlice.actions;
