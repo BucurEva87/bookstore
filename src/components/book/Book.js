@@ -5,7 +5,7 @@ import { removeBook } from '../../redux/books/books';
 // import style from './Book.module.scss'
 
 const Book = ({ author, title, category }) => {
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books.books);
   const dispatch = useDispatch();
 
   const handleRemoveBook = (e) => {
