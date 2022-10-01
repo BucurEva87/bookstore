@@ -1,1 +1,67 @@
-@import '../../styles/partials/variables'
+@import '../../styles/partials/variables';
+
+.footer {
+  width: 75rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-heading {
+  width: 100%;
+  padding-top: 1.813rem;
+  padding-bottom: 1.188rem;
+  color: $darkGray;
+  letter-spacing: -0.18px;
+  font-size: 1.25rem;
+  font-family: $montserrat;
+  font-weight: bold;
+  border-top: 0.1rem solid $borderGray;
+}
+
+select {
+  padding: 0.813rem 0 0.813rem 1.063rem;
+}
+
+input,
+select {
+  font-size: 1rem;
+  color: $veryLightPink;
+  letter-spacing: -0.15px;
+  font-family: $montserrat;
+  margin-right: 2.125rem;
+  background-color: $white;
+  border: 0.1rem solid $borderGray;
+  border-radius: 4px;
+}
+
+.book-title {
+  width: 34.5rem;
+  height: 2.813rem;
+  padding: 0.813rem 0 0.813rem 1.063rem;
+}
+
+.book-author {
+  width: 17.813rem;
+  height: 2.813rem;
+  padding: 0.375rem 0.938rem 0.563rem 1rem;
+}
+
+.btn-add-book {
+  background-color: $blue;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 4px;
+  font-size: 0.813rem;
+  text-align: center;
+  color: $white;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: none;
+}

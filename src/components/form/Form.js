@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook, addBookThunk } from '../../redux/books/books';
-// import style from './Form.module.scss'
+import style from './Form.module.scss';
 
 const Form = () => {
   const categories = useSelector((state) => state.categories);
@@ -28,12 +28,12 @@ const Form = () => {
   };
 
   return (
-    <footer>
-      <h2>Add new book</h2>
-      <form onSubmit={handleAddBook}>
-        <input ref={titleRef} type="text" id="book-title" placeholder="Book title" required />
-        <input ref={authorRef} type="text" id="book-author" placeholder="Book author" required />
-        <select ref={categoryRef} id="book-category" defaultValue="" required>
+    <footer className={style.footer}>
+      <h2 className={style['footer-heading']}>Add new book</h2>
+      <form onSubmit={handleAddBook} className={style.form}>
+        <input ref={titleRef} type="text" id="book-title" className={style['book-title']} placeholder="Book title" required />
+        <input ref={authorRef} type="text" id="book-author" className={style['book-author']} placeholder="Book author" required />
+        <select ref={categoryRef} id="book-category" className={style['book-category']} defaultValue="" required>
           <option value="" disabled hidden>Category</option>
           { categories.map((category) => (
             <option
@@ -44,7 +44,7 @@ const Form = () => {
             </option>
           )) }
         </select>
-        <input type="submit" value="Add book" />
+        <input type="submit" className={style['btn-add-book']} value="Add book" />
       </form>
     </footer>
   );

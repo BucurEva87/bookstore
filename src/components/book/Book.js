@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes as PT } from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBook, removeBookThunk } from '../../redux/books/books';
-import './Book.module.scss';
+import style from './Book.module.scss';
 
 const Book = ({
   id, author, title, category,
@@ -24,26 +24,29 @@ const Book = ({
   return (
     <article>
       <div className="info" data-id={id}>
-        <span className="category">{category}</span>
-        <h2 className="title">{title}</h2>
-        <span className="author">{author}</span>
-        <ul className="actions">
+        <span className={style.category}>{category}</span>
+        <h2 className={style.title}>{title}</h2>
+        <span className={style.author}>{author}</span>
+        <ul className={style.actions}>
           <li><a href="/">Comments</a></li>
           <li><a href="/" onClick={handleRemoveBook}>Remove</a></li>
           <li><a href="/">Edit</a></li>
         </ul>
       </div>
-      <div className="progress">
-        <div className="circle"> </div>
+      <div className={style.progress}>
+        <img src={`${process.env.PUBLIC_URL}images/circle.png`} alt="Progress" className={style.circle} />
         <div className="percentage">
-          <span className="total">64%</span>
-          <span className="completed">Completed</span>
+          <span className={style.total}>
+            {Math.floor(Math.random() * 100)}
+            %
+          </span>
+          <span className={style.completed}>Completed</span>
         </div>
       </div>
-      <div className="current">
-        <h5 className="chapter-heading">Chapter</h5>
-        <span className="chapter">Chapter 17</span>
-        <button type="button">Update progress</button>
+      <div className={style.current}>
+        <h5 className={style['chapter-heading']}>Chapter</h5>
+        <span className={style.chapter}>Chapter 17</span>
+        <button type="button" className={style['btn-update']}>Update progress</button>
       </div>
     </article>
   );
