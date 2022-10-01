@@ -1,11 +1,13 @@
 import React from 'react';
 import { PropTypes as PT } from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/books';
+import { removeBook, removeBookThunk } from '../../redux/books/books';
 // import style from './Book.module.scss'
 
-const Book = ({ author, title, category }) => {
-  const books = useSelector((state) => state.books);
+const Book = ({
+  id, author, title, category,
+}) => {
+  const books = useSelector((state) => state.books.books);
   const dispatch = useDispatch();
 
   const handleRemoveBook = (e) => {
@@ -16,11 +18,12 @@ const Book = ({ author, title, category }) => {
     const index = books.findIndex((b) => b.title === title);
 
     dispatch(removeBook(index));
+    dispatch(removeBookThunk(parent.dataset.id));
   };
 
   return (
     <article>
-      <div className="info">
+      <div className="info" data-id={id}>
         <span className="category">{category}</span>
         <h2 className="title">{title}</h2>
         <span className="author">{author}</span>
@@ -47,6 +50,7 @@ const Book = ({ author, title, category }) => {
 };
 
 Book.propTypes = {
+  id: PT.string.isRequired,
   author: PT.string.isRequired,
   title: PT.string.isRequired,
   category: PT.string.isRequired,

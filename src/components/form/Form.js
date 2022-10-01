@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addBook } from '../../redux/books/books';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook, addBookThunk } from '../../redux/books/books';
 // import style from './Form.module.scss'
 
 const Form = () => {
@@ -14,15 +15,16 @@ const Form = () => {
   const handleAddBook = (e) => {
     e.preventDefault();
 
-    const title = titleRef.current.value.trim();
-    const author = authorRef.current.value.trim();
-    const category = categoryRef.current.value;
+    const book = {
+      id: uuidv4(),
+      title: titleRef.current.value.trim(),
+      author: authorRef.current.value.trim(),
+      category: categoryRef.current.value,
+    };
 
-    dispatch(addBook({
-      title,
-      author,
-      category,
-    }));
+    dispatch(addBook(book));
+
+    dispatch(addBookThunk(book));
   };
 
   return (
