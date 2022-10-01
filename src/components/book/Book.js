@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes as PT } from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBook, removeBookThunk } from '../../redux/books/books';
-// import style from './Book.module.scss'
+import './Book.module.scss';
 
 const Book = ({
   id, author, title, category,

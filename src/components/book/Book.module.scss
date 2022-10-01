@@ -1,1 +1,13 @@
-@import '../../styles/partials/variables'
+@import '../../styles/partials/variables';
+
+article {
+  width: 75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  border: 0.1rem solid $borderGray;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0.938rem;
+}
