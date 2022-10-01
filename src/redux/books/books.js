@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 const appId = 'upvUxBk7y2ugNGPPGsaw';
 const apiBaseURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}`;
 
-export const getBooks = createAsyncThunk('books/getBooks', async () => {
+export const getBooksThunk = createAsyncThunk('books/getBooks', async () => {
   const response = await fetch(`${apiBaseURL}/books`, { credentials: 'omit' });
   const books = await response.json();
 
@@ -11,6 +11,18 @@ export const getBooks = createAsyncThunk('books/getBooks', async () => {
     id,
     ...book[0],
   }));
+});
+
+export const removeBookThunk = createAsyncThunk('books/removeBook', async (id) => {
+  await fetch(`${apiBaseURL}/books/${id}`, {
+    method: 'DELETE',
+    body: JSON.stringify({
+      item_id: id,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
 });
 
 const booksSlice = createSlice({
@@ -29,10 +41,14 @@ const booksSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getBooks.pending, (state) => ({ ...state, loading: true }));
-    builder.addCase(getBooks.fulfilled, (state, books) => (
+    builder.addCase(getBooksThunk.pending, (state) => ({ ...state, loading: true }));
+    builder.addCase(getBooksThunk.fulfilled, (state, books) => (
       { ...state, loading: false, books: books.payload }));
-    builder.addCase(getBooks.rejected, (state, error) => ({ ...state, loading: false, error }));
+    builder.addCase(getBooksThunk.rejected, (state, error) => (
+      { ...state, loading: false, error }));
+    builder.addCase(removeBookThunk.pending, (state) => ({ ...state, loading: true }));
+    builder.addCase(removeBookThunk.fulfilled, (state) => ({ ...state, loading: false }));
+    builder.addCase(removeBookThunk.rejected, (state) => ({ ...state, loading: false }));
   },
 });
 
