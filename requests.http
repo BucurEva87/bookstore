@@ -1,0 +1,5 @@
+POST https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/
+
+###
+
+GET https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/upvUxBk7y2ugNGPPGsaw/books

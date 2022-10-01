@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getBooksThunk } from '../../redux/books/books';
 import Book from '../book/Book';
 import Form from '../form/Form';
-// import style from './Books.module.scss';
+import style from './Books.module.scss';
 
 const Books = () => {
   const books = useSelector((state) => state.books.books);
@@ -17,7 +17,7 @@ const Books = () => {
 
   return (
     books && (
-      <section>
+      <section className={style['section-container']}>
         <ul>
           { books.map((book) => {
             const {

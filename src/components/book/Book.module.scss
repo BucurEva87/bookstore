@@ -1,1 +1,108 @@
-@import '../../styles/partials/variables'
+@import '../../styles/partials/variables';
+
+article {
+  width: 75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  border: 0.1rem solid $borderGray;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0.938rem;
+}
+
+.category {
+  margin-bottom: 0.25rem;
+  font-family: $montserrat;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  color: $black;
+}
+
+.title {
+  font-family: $roboto;
+  font-weight: bold;
+  color: $black;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+}
+
+ul.actions {
+  display: flex;
+  margin-top: 1.313rem;
+  gap: 2.125rem;
+}
+
+.author,
+ul.actions a {
+  font-family: $roboto;
+  font-weight: 300;
+  color: $lightBlue;
+  font-size: 0.875rem;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 1.313rem;
+  font-family: $montserrat;
+  color: $black;
+  padding-right: 4.938rem;
+  border-right: 0.1rem solid $borderGray;
+}
+
+.circle {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.total {
+  display: block;
+  font-size: 2rem;
+}
+
+.completed {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.current {
+  display: flex;
+  flex-direction: column;
+}
+
+.chapter-heading {
+  font-size: 0.813rem;
+  color: $black;
+  opacity: 0.5;
+  font-family: $roboto;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 0.438rem;
+}
+
+.chapter {
+  font-size: 1rem;
+  font-family: $roboto;
+  color: $black;
+  letter-spacing: -0.4px;
+  font-weight: 300;
+  margin-bottom: 1.438rem;
+}
+
+.btn-update {
+  background-color: $blue;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  width: 11.5rem;
+  height: 2.063rem;
+  border-radius: 3px;
+  font-size: 0.813rem;
+  text-align: center;
+  color: $white;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: none;
+}
